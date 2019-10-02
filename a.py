@@ -61,3 +61,106 @@ def removeIthWord(l, word, n):
   print(l)
 
 removeIthWord(['geeks', 'for', 'geeks'], 'geeks', 2)
+
+print(max(len(x) for x in [['A'], ['A', 'B'], ['A', 'B', 'C']] ))
+
+print(max(map(len, [['A'], ['A', 'B'], ['A', 'B', 'C']] )))
+
+k = [1, 3, 4, 3, 6, 7]
+k = [ i for i in range(len(k)) if k[i] == 3]
+print(k)
+
+arr = [0, 1, 0, 1, 0, 0, 1, 1, 1, 0]
+res = [x for x in arr if x==0] + [x for x in arr if x == 1]
+print(res)
+
+a = "$Gee*k;s..fo, r'Ge^eks?"
+p = "".join([x for x in a if x.isalpha()])
+print(p)
+
+l = ['gfg', 'i', 's', 'be', 's', 't']
+l = [i for x in l for i in x if x.isalpha() == True]
+print(l)
+
+a = 'a'
+for i in range(26):
+  print(a, end='')
+  a = chr(ord(a)+1)
+
+n = 100
+n = bin(n)
+l = [x for x in n if x == '1']
+print(len(l))
+
+arr1 = [-1, -2, 4, -6, 5, 7]
+arr2 = [6, 3, 4, 0]
+l = [(8-i, i) for i in arr1 if 8-i in arr2] 
+print(l)
+
+arr = [1, 14, 5, 20, 4, 2, 54, 20, 87, 98, 3, 1, 32]
+f = [x for x in arr if x<14]
+m = [x for x in arr if x>14 and x<20]
+e = [x for x in arr if x>20]
+print(f+m+e)
+
+s = "geeksforgeeks"
+l = [x for x in s if s.count(x) == 1]
+print(l)
+
+arr = [0, 1, 2, 3, 4, 5, 6, 7]
+e = [x for x in range(len(arr)) if x%2 == 0]
+o = [x for x in range(len(arr)) if x%2 !=0]
+arr = sorted(e) + sorted(o)
+print(arr)
+
+def countSetBits(n):
+  b = bin(n)
+  l1 = [b[i] for i in range(len(b)) if b[i]=='1' ]
+  return len(l1)
+
+l = sum(map(countSetBits, [x for x in range(3)]))
+print(l)
+
+arr = [1, 2, 0, 4, 3, 0, 5, 0]
+arr = [x for x in arr if x != 0] + [x for x in arr if x == 0]
+print(arr)
+
+m =[[0, 1, 1, 1], [0, 0, 1, 1], [1, 1, 1, 1],  [0, 0, 0, 0]]
+print(max(map(lambda a: a.count(1), m)))
+
+l = [10, 20, 10, 30, 40, 40]
+l = [x for x in l if l.count(x) == 1]
+print(l)
+
+a = set((1, 2, 3))
+b = set((3, 4, 5))
+print(a&b)
+
+l1 = [10, 15, 20, 25, 30, 35, 40]
+l2 = [25, 40, 35]
+l1 = set(l1)
+l2 = set(l2)
+l1 = list(l1 - l2)
+print(l1)
+
+a = [3, 4, 1, 3, 4, 5]
+print(a.index(max(a))+1)
+print(a.index(min(a))+1)
+
+def multiple(n, m):
+  a = range(n, (m*n)+1, n)
+  print(*a)
+
+multiple(3, 5)
+
+l = [1, 2, 3]
+a = []
+for i in range(len(l)):
+  for j in range(len(l)):
+    if j>=i:
+      a.append(l[i:j+1])
+print(a)
+
+#sort the list according to length
+l = ["rohan", "amy", "sapna", "muhammad", "aakash", "raunak", "chinmoy"]
+print(sorted(l, key = len))
