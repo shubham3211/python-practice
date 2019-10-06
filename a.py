@@ -167,5 +167,120 @@ print(sorted(l, key = len))
 
 l = [10, 20, 30, 40, 50, 60, 70, 80, 90]
 i = 0
-while(len(l)!=0):
-  
+
+c = ["john", "johnny", "jackie", "johnny", "john", "jackie", "jamie", "jamie", "john", "johnny", "jamie", "johnny", "john"]
+d = {}
+for i in c:
+  if i in d:
+    d[i] = d[i] + 1
+  else:
+    d[i] = 1
+print(d)
+
+a1 = [1, 5, 10, 20, 40, 80]
+a2 = [6, 7, 20, 80, 100]
+a3 = [3, 4, 15, 20, 30, 70, 80, 120]
+
+d.clear()
+
+a = {}
+b = {}
+c = {}
+
+for i in a1:
+  a[i] = 1
+for i in a2:
+  b[i] = 1
+for i in a3:
+  c[i] = 1
+print(a.keys() & b.keys() & c.keys())
+
+a = 8
+b = 4
+b1 = bin(a)
+b2 = bin(b)
+d1 = {}
+d2 = {}
+for i in b1:
+  if i in d1:
+    d1[i] = d1[i]+1
+  else:
+    d1[i] = 1
+for i in b2:
+  if i in d2:
+    d2[i] = d2[i]+1
+  else:
+    d2[i] = 1
+if d1['1']==d2['1'] and d1['0']==d2['0']:
+  print("Yes")
+else:
+  print("No")
+
+s = "ant magenta magnate tan gnamate"
+w = s.split(" ")
+# for i in range(len(w)):
+#   w[i] = "".join(sorted(w[i]))
+d.clear()
+d = {}
+for i in w:
+  k = "".join(sorted(i))
+  if i in d:
+    d[k] = (i, d[i]+1)
+  else:
+    d[k]= (i, 1)
+print(d)
+
+a = ['cat', 'dog', 'tac', 'god', 'act']
+d = {}
+for i in a:
+  k = "".join(sorted(i))
+  if k in d:
+    d[k].append(i)
+  else:
+    d[k] = []
+print(d)
+d.clear()
+
+k = "hello"
+for i in k:
+  if i in d:
+    d[i] = d[i]+1
+  else:
+    d[i] = 1
+
+l = []
+for i in d:
+  if d[i] == 1:
+    l.append(i)
+for i in l:
+  del d[i]
+print(d) 
+
+a = "abcdefghijklmnopqrstuvwxyz"
+s = "paradox"
+s = list(s)
+for i  in range(len(s)):
+  k = a.index(s[i])
+  s[i] = a[-k-1]
+print(s)
+
+s1 = "ABHISHEKsinGH"
+s2 = "gfhfBHkooIHnfndSHEKsiAnG"
+
+d1 = {}
+d2 = {}
+a = set()
+b = set()
+for i  in s1:
+  a.add(i)
+for i in s2:
+  b.add(i)
+if a&b == a:
+  print("Yes")
+
+for i in d.items():
+  print(i)
+
+l = [{ "name" : "Nandini", "age" : 20},  { "name" : "Manjeet", "age" : 20 }, { "name" : "Nikhil" , "age" : 19 }] 
+l = sorted(l, key=lambda x: x["age"], reverse = True)
+print(l)
