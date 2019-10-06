@@ -438,5 +438,3 @@ l = [1, 2, 3, 4, 5, 6, 7]
 l1 = list(map(lambda x: x**x, l))
 l2 = list(filter(lambda x: x%2 == 0, l))
 print(l1, l2)
-
-  
